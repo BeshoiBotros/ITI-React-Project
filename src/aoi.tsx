@@ -12,7 +12,7 @@ export const fetchUserDetail = async (id: string): Promise<User> => {
 }
 
 export const fetchWeather = async (city: string): Promise<Weather> => {
-    const res = await axios.get(`http://api.weatherapi.com/v1/current.json?key=aa9877d85b324c18966135657231402&lat=-37.3159&lon=81.1496&aqi=yes&q=${city}`)
+    const res = await axios.get(`https://api.weatherapi.com/v1/current.json?key=aa9877d85b324c18966135657231402&lat=-37.3159&lon=81.1496&aqi=yes&q=${city}`)
     return res.data;
 }
 
