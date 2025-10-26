@@ -17,7 +17,7 @@ const API_KEY = "aa9877d85b324c18966135657231402";
 
 async function fetchWeather(city: string): Promise<WeatherData> {
   const response = await fetch(
-    `http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city}&aqi=yes`
+    `https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city}&aqi=yes`
   );
   
   if (!response.ok) {
