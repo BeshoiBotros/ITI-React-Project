@@ -20,8 +20,10 @@ const AuthLayout: React.FC = () => {
           ></label>
           <div className="is-drawer-close:w-14 is-drawer-open:w-64 bg-base-200 flex flex-col items-start min-h-full">
             {/* Sidebar content here */}
-            <h1 className="text-2xl is-drawer-close:hidden m-2 whitespace-nowrap m-5">Admin Panel</h1>
-            <ul className="menu w-full grow p-4">
+            <h1 className="text-2xl is-drawer-close:hidden m-2 whitespace-nowrap m-5">
+              Admin Panel
+            </h1>
+            <ul className="menu w-full grow mt-5 gap-2">
               {/* list item */}
               <li>
                 <NavLink
@@ -83,6 +85,105 @@ const AuthLayout: React.FC = () => {
                     <circle cx="9" cy="7" r="4" />
                   </svg>
                   <span className="is-drawer-close:hidden">Users</span>
+                </NavLink>
+              </li>
+
+              {/* list item */}
+              <li>
+                <NavLink
+                  to={"/notes"}
+                  className={({ isActive }) =>
+                    isActive
+                      ? "is-drawer-close:tooltip is-drawer-close:tooltip-righ font-semibold bg-primary text-gray-100"
+                      : "is-drawer-close:tooltip is-drawer-close:tooltip-right text-gray-500 hover:text-gray-700 text-primary"
+                  }
+                  data-tip="Notes"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    className="lucide lucide-notebook-pen-icon lucide-notebook-pen"
+                  >
+                    <path d="M13.4 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7.4" />
+                    <path d="M2 6h4" />
+                    <path d="M2 10h4" />
+                    <path d="M2 14h4" />
+                    <path d="M2 18h4" />
+                    <path d="M21.378 5.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z" />
+                  </svg>
+                  <span className="is-drawer-close:hidden">Notes</span>
+                </NavLink>
+              </li>
+              {/* list item */}
+              <li>
+                <NavLink
+                  to={"/analytics"}
+                  className={({ isActive }) =>
+                    isActive
+                      ? "is-drawer-close:tooltip is-drawer-close:tooltip-righ font-semibold bg-primary text-gray-100"
+                      : "is-drawer-close:tooltip is-drawer-close:tooltip-right text-gray-500 hover:text-gray-700 text-primary"
+                  }
+                  data-tip="Analytics"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    className="lucide lucide-bar-chart-icon lucide-bar-chart"
+                  >
+                    <line x1="12" y1="20" x2="12" y2="10" />
+                    <line x1="18" y1="20" x2="18" y2="4" />
+                    <line x1="6" y1="20" x2="6" y2="16" />
+                  </svg>
+                  <span className="is-drawer-close:hidden">Analytics</span>
+                </NavLink>
+              </li>
+
+              {/* list item */}
+              <li>
+                <NavLink
+                  to={"/weather"}
+                  className={({ isActive }) =>
+                    isActive
+                      ? "is-drawer-close:tooltip is-drawer-close:tooltip-righ font-semibold bg-primary text-gray-100"
+                      : "is-drawer-close:tooltip is-drawer-close:tooltip-right text-gray-500 hover:text-gray-700 text-primary"
+                  }
+                  data-tip="Weather"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    className="lucide lucide-cloud-snow-icon lucide-cloud-snow"
+                  >
+                    <path d="M20 17.58A5 5 0 0 0 18 7h-1.26A8 8 0 1 0 4 16.25" />
+                    <line x1="8" y1="19" x2="8" y2="21" />
+                    <line x1="8" y1="23" x2="8" y2="23" />
+                    <line x1="12" y1="19" x2="12" y2="21" />
+                    <line x1="12" y1="23" x2="12" y2="23" />
+                    <line x1="16" y1="19" x2="16" y2="21" />
+                    <line x1="16" y1="23" x2="16" y2="23" />
+                  </svg>
+                  <span className="is-drawer-close:hidden">Weather</span>
                 </NavLink>
               </li>
             </ul>
